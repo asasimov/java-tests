@@ -1,3 +1,5 @@
+package ru.stqa.t.sandbox;
+
 public class MyFirstClass {
 
         public static void main(String[] args){
