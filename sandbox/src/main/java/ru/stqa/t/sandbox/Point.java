@@ -23,4 +23,14 @@ public class Point {
 
         return res;
     }
+
+    public double distance(Point p) {
+
+        double a = ((p.x - this.x)*(p.x - this.x));
+        double b = ((p.y - this.y)*(p.y - this.y));
+        double z = a + b;
+        double res = Math.sqrt(z);
+
+        return res;
+    }
 }
