@@ -10,7 +10,7 @@ public class Point {
         this.y = y;
     }
 
-    public static double distance(Point p1, Point p2) {
+    /* public static double distance(Point p1, Point p2) {
         double x1 = p1.x;
         double y1 = p1.y;
         double x2 = p2.x;
@@ -22,7 +22,7 @@ public class Point {
         double res = Math.sqrt(z);
 
         return res;
-    }
+    } */
 
     public double distance(Point p) {
 
