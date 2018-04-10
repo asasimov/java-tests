@@ -21,4 +21,15 @@ public class ContactHelper extends HelperBase{
         type(By.name("email"), contactData.getEmail());
         click(By.xpath("//div[@id='content']/form/input[21]"));
     }
+
+    public void selectContact() {
+        click(By.name("selected[]"));
+        /* для удаления всех контактов:
+        click(By.xpath("//input[@id='MassCB']")); */
+    }
+
+    public void confirmDetetion() {
+        click(By.xpath("//div[@id='content']/form[2]/div[2]/input"));
+        wd.switchTo().alert().accept();
+    }
 }
