@@ -1,19 +1,29 @@
 package ru.stqa.t.addressbook.appmanager;
 
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import sun.plugin2.util.BrowserType;
 
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
 
-    FirefoxDriver wd;
+    WebDriver wd;
 
     private SessionHelper sessionHelper;
     private ContactHelper contactHelper;
     private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
+    private String browser;
+
+    public ApplicationManager(String browser) {
+        this.browser = browser;
+    }
 
     public static boolean isAlertPresent(FirefoxDriver wd) {
         try {
@@ -26,7 +36,13 @@ public class ApplicationManager {
 
     public void init() {
         //wd = new FirefoxDriver();
-        wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true).setBinary("C:/Program Files/Mozilla Firefox/firefox.exe"));
+        if (browser == org.openqa.selenium.remote.BrowserType.FIREFOX) {
+            wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true).setBinary("C:/Program Files/Mozilla Firefox/firefox.exe"));
+        } else if (browser == org.openqa.selenium.remote.BrowserType.CHROME) {
+            wd = new ChromeDriver();
+        } else if (browser == org.openqa.selenium.remote.BrowserType.IE) {
+            wd = new InternetExplorerDriver();
+        }
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         wd.get("http://localhost/addressbook/");
         groupHelper = new GroupHelper(wd);
