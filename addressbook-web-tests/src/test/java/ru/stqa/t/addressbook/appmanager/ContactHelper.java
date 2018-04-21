@@ -2,11 +2,16 @@ package ru.stqa.t.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.t.addressbook.model.ContactData;
+import ru.stqa.t.addressbook.model.GroupData;
 
-public class ContactHelper extends HelperBase{
+import java.util.ArrayList;
+import java.util.List;
+
+public class ContactHelper extends HelperBase {
 
     public ContactHelper(WebDriver wd) {
         super(wd);
@@ -22,7 +27,7 @@ public class ContactHelper extends HelperBase{
         type(By.name("nickname"), contactData.getNickName());
         type(By.name("email"), contactData.getEmail());
 
-        if(creation) {
+        if (creation) {
             new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
         } else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
@@ -32,8 +37,9 @@ public class ContactHelper extends HelperBase{
     }
 
 
-    public void selectContact() {
-        click(By.name("selected[]"));
+    public void selectContact(int index) {
+        //click(By.name("selected[]"));
+        wd.findElements(By.name("selected[]")).get(index).click();
         /* для удаления всех контактов:
         click(By.xpath("//input[@id='MassCB']")); */
     }
@@ -67,5 +73,16 @@ public class ContactHelper extends HelperBase{
 
     public int getContactCount() {
         return wd.findElements(By.name("selected[]")).size();
+    }
+
+    public List<ContactData> getContactList() {
+        List<ContactData> contacts = new ArrayList<ContactData>();
+        List<WebElement> elements = wd.findElements(By.cssSelector("td.center input"));
+        for (WebElement element : elements) {
+            String firstName = element.getText();
+            ContactData contact = new ContactData(firstName, null, null, "null@yandex.ru", null);
+            contacts.add(contact);
+        }
+        return  contacts;
     }
 }
