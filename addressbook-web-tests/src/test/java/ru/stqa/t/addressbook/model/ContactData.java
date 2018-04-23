@@ -1,13 +1,26 @@
 package ru.stqa.t.addressbook.model;
 
 public class ContactData {
+
+
+    private int id;
     private final String firstName;
     private final String lastName;
     private final String nickName;
     private final String email;
     private String group;
 
+    public ContactData(int id, String firstName, String lastName, String nickName, String email, String group) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.nickName = nickName;
+        this.email = email;
+        this.group = group;
+    }
+
     public ContactData(String firstName, String lastName, String nickName, String email, String group) {
+        this.id = Integer.MAX_VALUE;
         this.firstName = firstName;
         this.lastName = lastName;
         this.nickName = nickName;
@@ -35,10 +48,19 @@ public class ContactData {
         return group;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "ContactData{" +
-                "firstName='" + firstName + '\'' +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
     }
