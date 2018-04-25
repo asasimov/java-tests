@@ -14,14 +14,14 @@ public class ContactModificationTests extends TestBase {
         app.getNavigationHelper().gotoHomePage();
 
         if(! app.getContactHelper().isThereAContact()) {
-            app.getContactHelper().createContact(new ContactData("Aleksandr", "Sasimov", "asasimov", "null@yandex.ru", "testGroupName_1"), true);
+            app.getContactHelper().createContact(new ContactData("Ivan", "Ivanov", "i.ivanov", "null1@yandex.ru", "testGroupName_1"), true);
         }
 
         List<ContactData> before = app.getContactHelper().getContactList();
 
-        app.getContactHelper().selectContact(before.size() - 1);
-        app.getContactHelper().selectEditContact();
-        ContactData contact = new ContactData(before.get(before.size() - 1).getId(),"Test", "Testov", "asasimov", "null@yandex.ru", null);
+        //app.getContactHelper().selectContact(before.size() - 1);
+        app.getContactHelper().selectContactEdit(2);
+        ContactData contact = new ContactData(before.get(0).getId(),"Test", "Testov", "t.testov", "null2@yandex.ru", null);
         app.getContactHelper().fillContactForm(contact, false);
         app.getContactHelper().submitContactModification();
         app.getContactHelper().returnToContactPage();
@@ -29,7 +29,6 @@ public class ContactModificationTests extends TestBase {
         List<ContactData> after = app.getContactHelper().getContactList();
         Assert.assertEquals(after.size(), before.size());
 
-        //так как для редактирования берется первая стока из таблицы, удаляем элемент с index=0
         before.remove(0);
         before.add(contact);
 
