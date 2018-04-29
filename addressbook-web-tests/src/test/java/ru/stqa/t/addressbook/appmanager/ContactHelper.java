@@ -60,6 +60,14 @@ public class ContactHelper extends HelperBase {
         returnToContactPage();
     }
 
+
+    public void modifyContact(int indexContactEdit, ContactData contact) {
+        selectContactEdit(indexContactEdit);
+        fillContactForm(contact, false);
+        submitContactModification();
+        returnToContactPage();
+    }
+
     private void gotoAddNewContact() {
         click(By.linkText("add new"));
     }
