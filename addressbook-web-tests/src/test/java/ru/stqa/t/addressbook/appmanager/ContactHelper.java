@@ -36,11 +36,11 @@ public class ContactHelper extends HelperBase {
     }
 
 
-    public void selectContact(int index) {
+    public void select(int index) {
         wd.findElements(By.name("selected[]")).get(index).click();
     }
 
-    public void confirmDeletion() {
+    public void confirm() {
         click(By.xpath("//div[@id='content']/form[2]/div[2]/input"));
         wd.switchTo().alert().accept();
     }
@@ -54,18 +54,23 @@ public class ContactHelper extends HelperBase {
         click(By.name("update"));
     }
 
-    public void createContact(ContactData contact, boolean creation) {
+    public void create(ContactData contact, boolean creation) {
         gotoAddNewContact();
         fillContactForm(contact, creation);
         returnToContactPage();
     }
 
 
-    public void modifyContact(int indexContactEdit, ContactData contact) {
+    public void modify(int indexContactEdit, ContactData contact) {
         selectContactEdit(indexContactEdit);
         fillContactForm(contact, false);
         submitContactModification();
         returnToContactPage();
+    }
+
+    public void delete(int index) {
+        select(index);
+        confirm();
     }
 
     private void gotoAddNewContact() {
@@ -80,7 +85,7 @@ public class ContactHelper extends HelperBase {
         return wd.findElements(By.name("selected[]")).size();
     }
 
-    public List<ContactData> getContactList() {
+    public List<ContactData> list() {
         List<ContactData> contacts = new ArrayList<ContactData>();
         List<WebElement> elements = wd.findElements(By.cssSelector("#maintable tr[name='entry']"));
         for (WebElement element : elements) {
