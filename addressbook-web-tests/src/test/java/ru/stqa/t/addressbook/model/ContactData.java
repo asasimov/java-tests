@@ -2,31 +2,21 @@ package ru.stqa.t.addressbook.model;
 
 public class ContactData {
 
-
     private int id = Integer.MAX_VALUE;
     private String firstName;
     private String lastName;
     private String nickName;
     private String email;
+    private String email2;
+    private String email3;
+    private String homePhone;
+    private String mobilePhone;
+    private String workPhone;
+    private String home2Phone;
+    private String address;
+    private String allPhones;
+    private String allEmails;
     private String group;
-
-    /*public ContactData(int id, String firstName, String lastName, String nickName, String email, String group) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.nickName = nickName;
-        this.email = email;
-        this.group = group;
-    }
-
-    public ContactData(String firstName, String lastName, String nickName, String email, String group) {
-        this.id = Integer.MAX_VALUE;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.nickName = nickName;
-        this.email = email;
-        this.group = group;
-    } */
 
     public String getFirstName() {
         return firstName;
@@ -51,6 +41,24 @@ public class ContactData {
     public int getId() {
         return id;
     }
+
+    public String getEmail2() { return email2; }
+
+    public String getEmail3() { return email3; }
+
+    public String getAddress() { return address; }
+
+    public String getHomePhone() { return homePhone; }
+
+    public String getMobilePhone() { return mobilePhone; }
+
+    public String getWorkPhone() { return workPhone; }
+
+    public String getHome2Phone() { return home2Phone; }
+
+    public String getAllPhones() { return allPhones; }
+
+    public String getAllEmails() { return allEmails; }
 
     public ContactData withId(int id) {
         this.id = id;
@@ -82,6 +90,51 @@ public class ContactData {
         return this;
     }
 
+    public ContactData withAllEmails(String allEmails) {
+        this.allEmails = allEmails;
+        return this;
+    }
+
+    public ContactData withAllPhones(String allPhones) {
+        this.allPhones = allPhones;
+        return this;
+    }
+
+    public ContactData withEmail2(String email2) {
+        this.email2 = email2;
+        return this;
+    }
+
+    public ContactData withEmail3(String email3) {
+        this.email3 = email3;
+        return this;
+    }
+
+    public ContactData withHomePhone(String homePhone) {
+        this.homePhone = homePhone;
+        return this;
+    }
+
+    public ContactData withMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
+        return this;
+    }
+
+    public ContactData withWorkPhone(String workPhone) {
+        this.workPhone = workPhone;
+        return this;
+    }
+
+    public ContactData withHome2Phone(String home2Phone) {
+        this.home2Phone = home2Phone;
+        return this;
+    }
+
+    public ContactData withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+
     @Override
     public String toString() {
         return "ContactData{" +
@@ -109,3 +162,10 @@ public class ContactData {
         return result;
     }
 }
+
+
+
+
+
+
+
