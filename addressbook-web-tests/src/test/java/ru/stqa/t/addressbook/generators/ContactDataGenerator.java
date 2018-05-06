@@ -51,12 +51,12 @@ public class ContactDataGenerator {
 
 
     private void saveAsCsv(List<ContactData> contacts, File file) throws IOException {
-        Writer writer = new FileWriter(file);
-        for (ContactData contact : contacts) {
-            writer.write(String.format("%s;%s;%s;%s;%s;%s\n", contact.getFirstName(), contact.getLastName(), contact.getNickName(),
-                    contact.getEmail(), contact.getGroup(), contact.getPhoto().getAbsolutePath()));
+        try (Writer writer = new FileWriter(file)) {
+            for (ContactData contact : contacts) {
+                writer.write(String.format("%s;%s;%s;%s;%s;%s\n", contact.getFirstName(), contact.getLastName(), contact.getNickName(),
+                        contact.getEmail(), contact.getGroup(), contact.getPhoto().getAbsolutePath()));
+            }
         }
-        writer.close();
     }
 
     private void saveAsXml(List<ContactData> contacts, File file) throws IOException {
