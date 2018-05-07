@@ -20,7 +20,7 @@ public class GroupCreationTests extends TestBase {
 
     @DataProvider
     public Iterator<Object[]> validGroupsFromXml() throws IOException {
-        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/groups.xml")))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File(app.getProperty("path.groups.data.xml"))))) {
             String xml = "";
             String line = reader.readLine();
             while (line != null) {
@@ -38,7 +38,7 @@ public class GroupCreationTests extends TestBase {
 
     @DataProvider
     public Iterator<Object[]> validGroupsFromJson() throws IOException {
-        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/groups.json")))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File(app.getProperty("path.groups.data.json"))))) {
             String json = "";
             String line = reader.readLine();
             while (line != null) {
@@ -46,8 +46,7 @@ public class GroupCreationTests extends TestBase {
                 line = reader.readLine();
             }
             Gson gson = new Gson();
-            List<GroupData> groups = gson.fromJson(json, new TypeToken<List<GroupData>>() {
-            }.getType()); // List<GroupData>.class
+            List<GroupData> groups = gson.fromJson(json, new TypeToken<List<GroupData>>() {}.getType()); // List<GroupData>.class
             return groups.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
         }
     }
@@ -71,7 +70,7 @@ public class GroupCreationTests extends TestBase {
     @Test
     public void testBadGroupCreation() {
         app.goTo().groupPage();
-        GroupData group = new GroupData().withName("test'GroupName_1");
+        GroupData group = new GroupData().withName(app.getProperty("g.badName"));
         Groups before = app.group().all();
         app.group().create(group);
         assertThat(app.group().count(), equalTo(before.size()));

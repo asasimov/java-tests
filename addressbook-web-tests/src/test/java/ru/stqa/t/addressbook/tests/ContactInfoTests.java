@@ -15,8 +15,10 @@ public class ContactInfoTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition() {
         if (app.contact().all().size() == 0) {
-            app.contact().create(new ContactData().withFirstName("Ivan").withLastName("Ivanov").withNickName("i.ivanov")
-                    .withEmail("null1@yandex.ru").withAddress("SPb").withHomePhone("333-22-55").withGroup("testGroupName_1"), true);
+            app.contact().create(new ContactData().withFirstName(app.getProperty("c.firstName"))
+                    .withLastName(app.getProperty("c.firstName")).withNickName(app.getProperty("c.nickName"))
+                    .withEmail(app.getProperty("c.email")).withAddress(app.getProperty("c.address"))
+                    .withHomePhone(app.getProperty("c.homePhone")).withGroup(app.getProperty("c.group")), true);
             app.goTo().homePage();
         }
     }

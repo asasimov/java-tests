@@ -23,7 +23,7 @@ public class ContactCreationTests extends TestBase {
     @DataProvider
     public Iterator<Object[]> validContactsFromXml() throws IOException {
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.xml")))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File(app.getProperty("path.contacts.data"))))) {
             String xml = "";
             String line = reader.readLine();
             while (line != null) {
@@ -56,7 +56,7 @@ public class ContactCreationTests extends TestBase {
     public void testCurrentDir() throws IOException {
         File currentDir = new File(".");
         System.out.println(currentDir.getAbsolutePath());
-        File photo = new File("src/test/resources/img.png");
+        File photo = new File(app.getProperty("path.contacts.photo"));
         System.out.println(photo.getAbsolutePath());
         System.out.println(photo.exists());
     }

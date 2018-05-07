@@ -10,13 +10,13 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
+
     private final Properties properties;
 
     WebDriver wd;
@@ -79,5 +79,9 @@ public class ApplicationManager {
 
     public SessionHelper session() {
         return sessionHelper;
+    }
+
+    public String getProperty(String propertyName) {
+        return properties.getProperty(propertyName);
     }
 }
