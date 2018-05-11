@@ -54,7 +54,6 @@ public class GroupCreationTests extends TestBase {
 
     @Test(dataProvider = "validGroupsFromJson")
     public void testGroupCreation(GroupData group) {
-
         app.goTo().groupPage();
         Groups before = app.group().all();
 

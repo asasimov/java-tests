@@ -46,7 +46,7 @@ public class ApplicationManager {
         String target = System.getProperty("target","local");
         properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
         if (browser.equals(BrowserType.FIREFOX)) {
-            wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true).setBinary("C:/Program Files/Mozilla Firefox/firefox.exe"));
+            wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true).setBinary(properties.getProperty("path.driver.firefox")));
         } else if (browser.equals(BrowserType.CHROME)) {
             wd = new ChromeDriver();
         } else if (browser.equals(BrowserType.IE)) {
