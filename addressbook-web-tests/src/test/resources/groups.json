@@ -1,16 +1,16 @@
 [
   {
-    "name": "test 0",
+    "name": "testGroupName_0",
     "header": "header 0",
     "footer": "footer 0"
   },
   {
-    "name": "test 1",
+    "name": "testGroupName_1",
     "header": "header 1",
     "footer": "footer 1"
   },
   {
-    "name": "test 2",
+    "name": "testGroupName_2",
     "header": "header 2",
     "footer": "footer 2"
   }
