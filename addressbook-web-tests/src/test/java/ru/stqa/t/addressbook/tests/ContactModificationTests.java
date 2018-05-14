@@ -19,7 +19,7 @@ public class ContactModificationTests extends TestBase {
             app.contact().create(new ContactData()
                     .withFirstName(app.getProperty("c.firstName")).withLastName(app.getProperty("c.lastName"))
                     .withNickName(app.getProperty("c.nickName")).withEmail(app.getProperty("c.email"))
-                    .withGroup(app.getProperty("c.group")).withAddress(app.getProperty("c.address"))
+                    .withAddress(app.getProperty("c.address"))
                     .withHomePhone(app.getProperty("c.homePhone")), true);
 
             app.goTo().homePage();

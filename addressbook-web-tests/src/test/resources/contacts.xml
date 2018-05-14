@@ -6,7 +6,6 @@
     <email>test0@yandex.ru</email>
     <homePhone>333-22-00</homePhone>
     <address>SPb</address>
-    <group>testGroupName_1</group>
     <photo>src\test\resources\img.png</photo>
   </contact>
   <contact>
@@ -16,7 +15,6 @@
     <email>test1@yandex.ru</email>
     <homePhone>333-22-01</homePhone>
     <address>SPb</address>
-    <group>testGroupName_1</group>
     <photo>src\test\resources\img.png</photo>
   </contact>
   <contact>
@@ -26,7 +24,6 @@
     <email>test2@yandex.ru</email>
     <homePhone>333-22-02</homePhone>
     <address>SPb</address>
-    <group>testGroupName_1</group>
     <photo>src\test\resources\img.png</photo>
   </contact>
 </list>

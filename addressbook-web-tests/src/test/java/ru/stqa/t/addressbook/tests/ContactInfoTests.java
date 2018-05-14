@@ -18,7 +18,7 @@ public class ContactInfoTests extends TestBase {
             app.contact().create(new ContactData().withFirstName(app.getProperty("c.firstName"))
                     .withLastName(app.getProperty("c.firstName")).withNickName(app.getProperty("c.nickName"))
                     .withEmail(app.getProperty("c.email")).withAddress(app.getProperty("c.address"))
-                    .withHomePhone(app.getProperty("c.homePhone")).withGroup(app.getProperty("c.group")), true);
+                    .withHomePhone(app.getProperty("c.homePhone")), true);
             app.goTo().homePage();
         }
     }
