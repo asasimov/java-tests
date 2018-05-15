@@ -4,6 +4,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.t.addressbook.model.ContactData;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -18,7 +19,8 @@ public class ContactInfoTests extends TestBase {
             app.contact().create(new ContactData().withFirstName(app.getProperty("c.firstName"))
                     .withLastName(app.getProperty("c.firstName")).withNickName(app.getProperty("c.nickName"))
                     .withEmail(app.getProperty("c.email")).withAddress(app.getProperty("c.address"))
-                    .withHomePhone(app.getProperty("c.homePhone")), true);
+                    .withHomePhone(app.getProperty("c.homePhone"))
+                    .withPhoto(new File(app.getProperty("path.contacts.photo"))), true);
             app.goTo().homePage();
         }
     }

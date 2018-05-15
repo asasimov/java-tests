@@ -47,8 +47,14 @@ public class ContactHelper extends HelperBase {
         wd.findElements(By.name("selected[]")).get(index).click();
     }
 
-    private void selectById(int id) {
+    public void selectById(int id) {
         wd.findElement(By.cssSelector("td input[value='"+ id + "']")).click();
+    }
+
+    public void addToGroup(int contact_id, int group_id) {
+        wd.findElement(By.xpath("//div[@class='right']/select[@name='to_group']/option[@value='"+ group_id + "']")).click();
+        wd.findElement(By.cssSelector("td input[value='"+ contact_id + "']")).click();
+        click(By.name("add"));
     }
 
     public void confirm() {

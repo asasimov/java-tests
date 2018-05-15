@@ -40,4 +40,13 @@ public class DbHelper {
         session.close();
         return new Contacts(result);
     }
+
+    public ContactData contactInGroups(int contact_id) {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        ContactData result = (ContactData) session.createQuery( String.format("from ContactData where id = %s", contact_id)).getSingleResult();
+        session.getTransaction().commit();
+        session.close();
+        return result;
+    }
 }
