@@ -57,6 +57,12 @@ public class ContactHelper extends HelperBase {
         click(By.name("add"));
     }
 
+    public void removeFromGroup(int contact_id, int group_id) {
+        wd.findElement(By.xpath("//form[@id='right']/select[@name='group']/option[@value='"+ group_id + "']")).click();
+        wd.findElement(By.cssSelector("td input[value='"+ contact_id + "']")).click();
+        click(By.name("remove"));
+    }
+
     public void confirm() {
         click(By.xpath("//div[@id='content']/form[2]/div[2]/input"));
         wd.switchTo().alert().accept();
@@ -163,4 +169,5 @@ public class ContactHelper extends HelperBase {
         return new ContactData().withId(contact.getId()).withFirstName(firstName).withLastName(lastName).withAddress(address)
                 .withHomePhone(homePhone).withMobilePhone(mobilePhone).withWorkPhone(workPhone).withHome2Phone(home2Phone).withEmail(email).withEmail2(email2).withEmail3(email3);
     }
+
 }

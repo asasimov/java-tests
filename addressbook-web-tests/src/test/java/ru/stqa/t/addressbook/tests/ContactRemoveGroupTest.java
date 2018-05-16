@@ -12,7 +12,7 @@ import java.io.File;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class ContactAddToGroupTest extends TestBase {
+public class ContactRemoveGroupTest extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
@@ -26,52 +26,47 @@ public class ContactAddToGroupTest extends TestBase {
                     .withFirstName(app.getProperty("c.firstName")).withLastName(app.getProperty("c.lastName"))
                     .withNickName(app.getProperty("c.nickName")).withEmail(app.getProperty("c.email"))
                     .withAddress(app.getProperty("c.address"))
-                    .withPhoto(new File(app.getProperty("path.contacts.photo"))), true);
+                    .withPhoto(new File(app.getProperty("path.contacts.photo")))
+                    .inGroup(app.db().groups().iterator().next()), true);
         }
     }
 
     @Test
-    public void testContactAddToGroup() {
+    public void testContactRemoveGroup() {
+        app.goTo().homePage();
         Groups groups = app.db().groups();
         Contacts contacts = app.db().contacts();
 
-        ContactData contact = null;
+        int contact_id = 0;
+        Groups contactGroups = null;
         for (ContactData c : contacts) {
-            if(c.getGroups().size() < groups.size()) {
-                contact = new ContactData().withId(c.getId()).withLastName(c.getLastName())
-                        .withFirstName(c.getFirstName()).withEmail(c.getEmail()).withAddress(c.getAddress())
-                        .withPhoto(c.getPhoto()).withNickName(c.getNickName());
-                break;
+            if(c.getGroups().size() > 0) {
+               contact_id = c.getId();
+               contactGroups = c.getGroups();
+               break;
             }
         }
-        //создаём новый контакт, если не нашли подходящий
-        if (contact == null) {
-            app.goTo().homePage();
+
+        if (contact_id == 0) {
             ContactData newContact = new ContactData()
                     .withFirstName(app.getProperty("c.firstName")).withLastName(app.getProperty("c.lastName"))
                     .withNickName(app.getProperty("c.nickName")).withEmail(app.getProperty("c.email"))
                     .withAddress(app.getProperty("c.address"))
-                    .withPhoto(new File(app.getProperty("path.contacts.photo")));
+                    .withPhoto(new File(app.getProperty("path.contacts.photo")))
+                    .inGroup(app.db().groups().iterator().next());
             app.contact().create(newContact, true);
 
-            //получаем id созданного контакта
             int newContactId = app.db().contacts().stream().mapToInt((c) -> c.getId()).max().getAsInt();
             newContact.withId(newContactId);
-            GroupData group = groups.stream().iterator().next();
-
-            app.contact().addToGroup(newContact.getId(), group.getId());
-
-            ContactData contactInDb = app.db().contactInGroups(newContactId);
-            assertThat(newContact.inGroup(group).getGroups(), equalTo(contactInDb.getGroups()));
+            GroupData group = newContact.getGroups().stream().iterator().next();
+            app.contact().removeFromGroup(newContact.getId(), group.getId());
+            ContactData contactInDb = app.db().contactInGroups(newContact.getId());
+            assertThat(newContact.getGroups().without(group), equalTo(contactInDb.getGroups()));
         } else {
-            ContactData beforeContact = app.db().contactInGroups(contact.getId());
-            groups.removeAll(beforeContact.getGroups());
-            GroupData group = groups.stream().iterator().next();
-
-            app.contact().addToGroup(beforeContact.getId(), group.getId());
-
-            ContactData contactInDb = app.db().contactInGroups(contact.getId());
-            assertThat(beforeContact.inGroup(group).getGroups(), equalTo(contactInDb.getGroups()));
+            GroupData group = contactGroups.iterator().next();
+            app.contact().removeFromGroup(contact_id, group.getId());
+            ContactData contactInDb = app.db().contactInGroups(contact_id);
+            assertThat(contactGroups.without(group), equalTo(contactInDb.getGroups()));
         }
     }
 }
