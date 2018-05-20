@@ -1,13 +1,11 @@
 package ru.stqa.t.mantis.appmanager;
 
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
-import ru.stqa.t.mantis.tests.RegistrationTests;
 
 import java.io.File;
 import java.io.FileReader;
@@ -22,6 +20,7 @@ public class ApplicationManager {
     private WebDriver wd;
     private RegistrationHelper registrationHelper;
     private FtpHelper ftp;
+    private MailHelper mailHelper;
 
     public ApplicationManager(String browser) {
         this.browser = browser;
@@ -75,5 +74,12 @@ public class ApplicationManager {
             ftp = new FtpHelper(this);
         }
         return ftp;
+    }
+
+    public MailHelper mail() {
+        if(mailHelper == null) {
+            mailHelper = new MailHelper(this);
+        }
+        return mailHelper;
     }
 }
