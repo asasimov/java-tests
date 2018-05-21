@@ -15,6 +15,7 @@ public class TestBase {
 
     @BeforeSuite
     public void setUp() throws Exception {
+        app.mail().start();
         app.init();
         app.ftp().upload(new File("src/test/resources/config_defaults_inc.php"), "config_defaults_inc.php", "config_defaults_inc.php.bak");
     }
@@ -23,6 +24,7 @@ public class TestBase {
     public void tearDown() throws IOException {
         app.ftp().restore("config_defaults_inc.php.bak", "config_defaults_inc.php");
         app.stop();
+        app.mail().stop();
     }
 
 }
