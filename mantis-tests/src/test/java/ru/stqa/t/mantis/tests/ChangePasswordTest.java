@@ -22,8 +22,6 @@ public class ChangePasswordTest extends TestBase {
         app.session().login(app.getProperty("web.adminLogin"), app.getProperty("web.adminPassword"));
         app.resetPassword().goToManagePage();
         UserData user = app.db().user();
-        //String username = app.db().user().getUsername();
-        //String email = app.db().user().getEmail();
         app.resetPassword().changePasswordStart(user.getUsername());
         List<MailMessage> mailMessages = app.mail().waitForMail(1, 30000);
         String resetPasswordLink = app.mail().findMailLink(mailMessages, user.getEmail());
