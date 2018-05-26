@@ -3,6 +3,7 @@ package ru.stqa.t.mantis.tests;
 import org.testng.annotations.Test;
 import ru.stqa.t.mantis.appmanager.HttpSession;
 import ru.stqa.t.mantis.model.MailMessage;
+import ru.stqa.t.mantis.model.UserData;
 
 import javax.mail.MessagingException;
 import java.io.IOException;
@@ -20,15 +21,16 @@ public class ChangePasswordTest extends TestBase {
         String newPassword = "newPas$word1";
         app.session().login(app.getProperty("web.adminLogin"), app.getProperty("web.adminPassword"));
         app.resetPassword().goToManagePage();
-        String username = app.db().user().getUsername();
-        String email = app.db().user().getEmail();
-        app.resetPassword().changePasswordStart(username);
+        UserData user = app.db().user();
+        //String username = app.db().user().getUsername();
+        //String email = app.db().user().getEmail();
+        app.resetPassword().changePasswordStart(user.getUsername());
         List<MailMessage> mailMessages = app.mail().waitForMail(1, 30000);
-        String resetPasswordLink = app.mail().findMailLink(mailMessages, email);
+        String resetPasswordLink = app.mail().findMailLink(mailMessages, user.getEmail());
         app.resetPassword().changePasswordFinish(resetPasswordLink, newPassword);
 
-        assertTrue(session.login(username, newPassword));
-        assertTrue(session.isLoggedInAs(username));
+        assertTrue(session.login(user.getUsername(), newPassword));
+        assertTrue(session.isLoggedInAs(user.getUsername()));
     }
 
 }
