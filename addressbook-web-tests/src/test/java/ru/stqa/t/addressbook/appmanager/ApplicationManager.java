@@ -60,18 +60,18 @@ public class ApplicationManager {
             } else if (browser.equals(BrowserType.IE)) {
                 wd = new InternetExplorerDriver();
             }
-            wd.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-            wd.get(properties.getProperty("web.baseUrl"));
-            groupHelper = new GroupHelper(wd);
-            navigationHelper = new NavigationHelper(wd);
-            contactHelper = new ContactHelper(wd);
-            sessionHelper = new SessionHelper(wd);
-            sessionHelper.login(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
         } else {
             DesiredCapabilities capabilitiies = new DesiredCapabilities();
             capabilitiies.setBrowserName(browser);
             wd = new RemoteWebDriver(new URL(properties.getProperty("selenium.server")), capabilitiies);
         }
+        wd.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        wd.get(properties.getProperty("web.baseUrl"));
+        groupHelper = new GroupHelper(wd);
+        navigationHelper = new NavigationHelper(wd);
+        contactHelper = new ContactHelper(wd);
+        sessionHelper = new SessionHelper(wd);
+        sessionHelper.login(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
     }
 
     public void stop() {
