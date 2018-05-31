@@ -4,7 +4,8 @@
     <lastName>LastName 0</lastName>
     <nickName>NickName 0</nickName>
     <email>test0@yandex.ru</email>
-    <group>testGroupName_1</group>
+    <homePhone>333-22-00</homePhone>
+    <address>SPb</address>
     <photo>src\test\resources\img.png</photo>
   </contact>
   <contact>
@@ -12,7 +13,8 @@
     <lastName>LastName 1</lastName>
     <nickName>NickName 1</nickName>
     <email>test1@yandex.ru</email>
-    <group>testGroupName_1</group>
+    <homePhone>333-22-01</homePhone>
+    <address>SPb</address>
     <photo>src\test\resources\img.png</photo>
   </contact>
   <contact>
@@ -20,7 +22,8 @@
     <lastName>LastName 2</lastName>
     <nickName>NickName 2</nickName>
     <email>test2@yandex.ru</email>
-    <group>testGroupName_1</group>
+    <homePhone>333-22-02</homePhone>
+    <address>SPb</address>
     <photo>src\test\resources\img.png</photo>
   </contact>
 </list>
