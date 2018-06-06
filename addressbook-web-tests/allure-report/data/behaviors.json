@@ -1,0 +1,65 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "testContactCreation",
+    "uid" : "9ad788d6101fb617",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1528307751700,
+      "stop" : 1528307755455,
+      "duration" : 3755
+    },
+    "flaky" : false,
+    "parameters" : [ "ContactData{id=0, firstName='FirstName 0', lastName='LastName 0', address='SPb'}" ]
+  }, {
+    "name" : "testContactCreation",
+    "uid" : "9e1d18d1e11174ca",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1528307755503,
+      "stop" : 1528307758048,
+      "duration" : 2545
+    },
+    "flaky" : false,
+    "parameters" : [ "ContactData{id=0, firstName='FirstName 1', lastName='LastName 1', address='SPb'}" ]
+  }, {
+    "name" : "testContactCreation",
+    "uid" : "84e882ad8b01a562",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1528307758080,
+      "stop" : 1528307760623,
+      "duration" : 2543
+    },
+    "flaky" : false,
+    "parameters" : [ "ContactData{id=0, firstName='FirstName 2', lastName='LastName 2', address='SPb'}" ]
+  }, {
+    "name" : "testContactModification",
+    "uid" : "b5a9dc1618794698",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1528307760728,
+      "stop" : 1528307766062,
+      "duration" : 5334
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "testContactDeletion",
+    "uid" : "2e85256a0142f14c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1528307766169,
+      "stop" : 1528307769889,
+      "duration" : 3720
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  } ]
+}

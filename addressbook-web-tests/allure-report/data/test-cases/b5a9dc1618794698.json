@@ -1,0 +1,130 @@
+{
+  "uid" : "b5a9dc1618794698",
+  "name" : "testContactModification",
+  "fullName" : "ru.stqa.t.addressbook.tests.ContactModificationTests.testContactModification",
+  "historyId" : "7773bd524226bfc7af76bb5512cc1313",
+  "time" : {
+    "start" : 1528307760728,
+    "stop" : 1528307766062,
+    "duration" : 5334
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "logTestStart",
+    "time" : {
+      "start" : 1528307760654,
+      "stop" : 1528307760654,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "ensurePreconditions",
+    "time" : {
+      "start" : 1528307760654,
+      "stop" : 1528307760726,
+      "duration" : 72
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1528307741641,
+      "stop" : 1528307751097,
+      "duration" : 9456
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "logTestStop",
+    "time" : {
+      "start" : 1528307766077,
+      "stop" : 1528307766077,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1528307769938,
+      "stop" : 1528307770733,
+      "duration" : 795
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.stqa.t.addressbook.tests.ContactModificationTests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.stqa.t.addressbook.tests.ContactModificationTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "testContactModification"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Suite1"
+  }, {
+    "name" : "suite",
+    "value" : "Contacts"
+  }, {
+    "name" : "subSuite",
+    "value" : "ru.stqa.t.addressbook.tests.ContactModificationTests"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-JMQ481U"
+  }, {
+    "name" : "thread",
+    "value" : "1000@DESKTOP-JMQ481U.Test worker(11)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b5a9dc1618794698.json",
+  "parameterValues" : [ ]
+}

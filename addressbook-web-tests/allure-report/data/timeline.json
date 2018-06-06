@@ -1,0 +1,73 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-JMQ481U",
+    "children" : [ {
+      "name" : "1000@DESKTOP-JMQ481U.Test worker(11)",
+      "children" : [ {
+        "name" : "testContactCreation",
+        "uid" : "9e1d18d1e11174ca",
+        "parentUid" : "8ffe9af8688fd9beebde006478604123",
+        "status" : "passed",
+        "time" : {
+          "start" : 1528307755503,
+          "stop" : 1528307758048,
+          "duration" : 2545
+        },
+        "flaky" : false,
+        "parameters" : [ "ContactData{id=0, firstName='FirstName 1', lastName='LastName 1', address='SPb'}" ]
+      }, {
+        "name" : "testContactCreation",
+        "uid" : "9ad788d6101fb617",
+        "parentUid" : "8ffe9af8688fd9beebde006478604123",
+        "status" : "passed",
+        "time" : {
+          "start" : 1528307751700,
+          "stop" : 1528307755455,
+          "duration" : 3755
+        },
+        "flaky" : false,
+        "parameters" : [ "ContactData{id=0, firstName='FirstName 0', lastName='LastName 0', address='SPb'}" ]
+      }, {
+        "name" : "testContactDeletion",
+        "uid" : "2e85256a0142f14c",
+        "parentUid" : "8ffe9af8688fd9beebde006478604123",
+        "status" : "passed",
+        "time" : {
+          "start" : 1528307766169,
+          "stop" : 1528307769889,
+          "duration" : 3720
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "testContactModification",
+        "uid" : "b5a9dc1618794698",
+        "parentUid" : "8ffe9af8688fd9beebde006478604123",
+        "status" : "passed",
+        "time" : {
+          "start" : 1528307760728,
+          "stop" : 1528307766062,
+          "duration" : 5334
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "testContactCreation",
+        "uid" : "84e882ad8b01a562",
+        "parentUid" : "8ffe9af8688fd9beebde006478604123",
+        "status" : "passed",
+        "time" : {
+          "start" : 1528307758080,
+          "stop" : 1528307760623,
+          "duration" : 2543
+        },
+        "flaky" : false,
+        "parameters" : [ "ContactData{id=0, firstName='FirstName 2', lastName='LastName 2', address='SPb'}" ]
+      } ],
+      "uid" : "8ffe9af8688fd9beebde006478604123"
+    } ],
+    "uid" : "5b8e344c59c7f86d29d63b630bc6ef79"
+  } ]
+}
