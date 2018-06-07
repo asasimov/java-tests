@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.t.addressbook.tests.ContactInfoTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-06-07T18:04:35" hostname="DESKTOP-JMQ481U" time="9.065">
+  <properties/>
+  <testcase name="testInfoContact" classname="ru.stqa.t.addressbook.tests.ContactInfoTests" time="9.065"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

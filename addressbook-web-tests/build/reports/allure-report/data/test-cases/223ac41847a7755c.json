@@ -1,0 +1,121 @@
+{
+  "uid" : "223ac41847a7755c",
+  "name" : "testContactDeletion",
+  "fullName" : "ru.stqa.t.addressbook.tests.ContactDeletionTests.testContactDeletion",
+  "historyId" : "3659b18dc6f8e875d059a4d31d7baecb",
+  "time" : {
+    "start" : 1528394670854,
+    "stop" : 1528394674524,
+    "duration" : 3670
+  },
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ {
+    "name" : "logTestStart",
+    "time" : {
+      "start" : 1528394670775,
+      "stop" : 1528394670775,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  }, {
+    "name" : "ensurePreconditions",
+    "time" : {
+      "start" : 1528394670791,
+      "stop" : 1528394670854,
+      "duration" : 63
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  }, {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1528394646445,
+      "stop" : 1528394656143,
+      "duration" : 9698
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "logTestStop",
+    "time" : {
+      "start" : 1528394674526,
+      "stop" : 1528394674526,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  }, {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1528394685108,
+      "stop" : 1528394685967,
+      "duration" : 859
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.stqa.t.addressbook.tests.ContactDeletionTests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.stqa.t.addressbook.tests.ContactDeletionTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "testContactDeletion"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Suite1"
+  }, {
+    "name" : "suite",
+    "value" : "Contacts"
+  }, {
+    "name" : "subSuite",
+    "value" : "ru.stqa.t.addressbook.tests.ContactDeletionTests"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-JMQ481U"
+  }, {
+    "name" : "thread",
+    "value" : "7744@DESKTOP-JMQ481U.Test worker(11)"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  }
+}

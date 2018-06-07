@@ -1,1 +1,0 @@
-{"uuid":"a7224204-d1f6-4b9c-baff-f12868589252","name":"ru.stqa.t.addressbook.tests.TestBase.logTestStart","description":"","start":1528307755491,"stop":1528307755492,"children":["f8d49e5f-4adc-4900-802e-bcaaad71e8c6"],"befores":[{"name":"logTestStart","status":"passed","stage":"finished","description":"","start":1528307755491,"stop":1528307755492}]}

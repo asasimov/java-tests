@@ -1,0 +1,121 @@
+{
+  "uid" : "e6cd6de3712ae3e8",
+  "name" : "testContactModification",
+  "fullName" : "ru.stqa.t.addressbook.tests.ContactModificationTests.testContactModification",
+  "historyId" : "7773bd524226bfc7af76bb5512cc1313",
+  "time" : {
+    "start" : 1528394665495,
+    "stop" : 1528394670760,
+    "duration" : 5265
+  },
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ {
+    "name" : "ensurePreconditions",
+    "time" : {
+      "start" : 1528394665410,
+      "stop" : 1528394665473,
+      "duration" : 63
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  }, {
+    "name" : "logTestStart",
+    "time" : {
+      "start" : 1528394665395,
+      "stop" : 1528394665395,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  }, {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1528394646445,
+      "stop" : 1528394656143,
+      "duration" : 9698
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "logTestStop",
+    "time" : {
+      "start" : 1528394670775,
+      "stop" : 1528394670775,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  }, {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1528394685108,
+      "stop" : 1528394685967,
+      "duration" : 859
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.stqa.t.addressbook.tests.ContactModificationTests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.stqa.t.addressbook.tests.ContactModificationTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "testContactModification"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Suite1"
+  }, {
+    "name" : "suite",
+    "value" : "Contacts"
+  }, {
+    "name" : "subSuite",
+    "value" : "ru.stqa.t.addressbook.tests.ContactModificationTests"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-JMQ481U"
+  }, {
+    "name" : "thread",
+    "value" : "7744@DESKTOP-JMQ481U.Test worker(11)"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  }
+}

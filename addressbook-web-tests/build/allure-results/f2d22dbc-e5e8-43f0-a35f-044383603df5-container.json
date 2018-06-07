@@ -1,1 +1,0 @@
-{"uuid":"f2d22dbc-e5e8-43f0-a35f-044383603df5","name":"ru.stqa.t.addressbook.tests.ContactDeletionTests.ensurePreconditions","description":"","start":1528307766093,"stop":1528307766157,"children":["8375e845-cc9c-471d-819a-8929a2f60f52"],"befores":[{"name":"ensurePreconditions","status":"passed","stage":"finished","description":"","start":1528307766093,"stop":1528307766157}]}

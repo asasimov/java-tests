@@ -1,0 +1,121 @@
+{
+  "uid" : "efe8768757b3d718",
+  "name" : "РўРµСЃС‚, РєРѕС‚РѕСЂС‹Р№ СѓРґР°Р»СЏРµС‚ РєРѕРЅС‚Р°РєС‚ РёР· Р·Р°СЂР°РЅРµРµ СЃРѕР·РґР°РЅРЅРѕР№ РіСЂСѓРїРїС‹",
+  "fullName" : "ru.stqa.t.addressbook.tests.ContactRemoveGroupTest.testContactRemoveGroup",
+  "historyId" : "51a1a63f54e15ea6e2169785d37f6cba",
+  "time" : {
+    "start" : 1528394684407,
+    "stop" : 1528394685026,
+    "duration" : 619
+  },
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ {
+    "name" : "logTestStart",
+    "time" : {
+      "start" : 1528394684320,
+      "stop" : 1528394684320,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  }, {
+    "name" : "РўРµСЃС‚, РєРѕС‚РѕСЂС‹Р№ СѓРґР°Р»СЏРµС‚ РєРѕРЅС‚Р°РєС‚ РёР· Р·Р°СЂР°РЅРµРµ СЃРѕР·РґР°РЅРЅРѕР№ РіСЂСѓРїРїС‹",
+    "time" : {
+      "start" : 1528394684330,
+      "stop" : 1528394684391,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  }, {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1528394646445,
+      "stop" : 1528394656143,
+      "duration" : 9698
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "logTestStop",
+    "time" : {
+      "start" : 1528394685036,
+      "stop" : 1528394685037,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  }, {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1528394685108,
+      "stop" : 1528394685967,
+      "duration" : 859
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.stqa.t.addressbook.tests.ContactRemoveGroupTest"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.stqa.t.addressbook.tests.ContactRemoveGroupTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testContactRemoveGroup"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Suite1"
+  }, {
+    "name" : "suite",
+    "value" : "Contacts"
+  }, {
+    "name" : "subSuite",
+    "value" : "ru.stqa.t.addressbook.tests.ContactRemoveGroupTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-JMQ481U"
+  }, {
+    "name" : "thread",
+    "value" : "7744@DESKTOP-JMQ481U.Test worker(11)"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  }
+}
