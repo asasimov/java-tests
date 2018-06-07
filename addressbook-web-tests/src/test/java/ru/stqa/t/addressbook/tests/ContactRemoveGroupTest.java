@@ -1,5 +1,6 @@
 package ru.stqa.t.addressbook.tests;
 
+import io.qameta.allure.Description;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.t.addressbook.model.ContactData;
@@ -15,6 +16,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class ContactRemoveGroupTest extends TestBase {
 
     @BeforeMethod
+    @Description(value = "Описание BeforeMethod")
     public void ensurePreconditions() {
         if(app.db().groups().size() == 0) {
             app.goTo().groupPage();
@@ -31,7 +33,7 @@ public class ContactRemoveGroupTest extends TestBase {
         }
     }
 
-    @Test
+    @Test(description = "Описание тестового метода")
     public void testContactRemoveGroup() {
         app.goTo().homePage();
         Groups groups = app.db().groups();
