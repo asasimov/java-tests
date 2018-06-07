@@ -33,7 +33,8 @@ public class ContactRemoveGroupTest extends TestBase {
         }
     }
 
-    @Test(description = "Описание тестового метода")
+    @Test
+    @Description("Описание тестового метода")
     public void testContactRemoveGroup() {
         app.goTo().homePage();
         Groups groups = app.db().groups();

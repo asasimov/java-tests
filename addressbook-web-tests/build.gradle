@@ -66,7 +66,7 @@ task testContacts (type : Test) {
 }
 
 allure {
-    version = '2.2.1'
+    version = '2.6.0'
     autoconfigure = true
     aspectjweaver = true
 }
