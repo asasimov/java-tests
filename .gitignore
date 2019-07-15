@@ -1,5 +1,37 @@
+.git
+out/
+
+#IDEA files
+.idea
+*.iml
+*.ipr
+
+#Eclipse files
+*.settings
+*.classpath
+*.project
+*.pydevproject
+
+#Netbeans files
+/.nb-gradle/
+
+#Mac OS stuff
+.DS_Store
+
+#Java
+*.class
+
+# Log file
+*.log
+logs/
+
+#Allure files
+.allure
+allure-report
+
+### Gradle ###
 .gradle
-/build/
+build/
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -9,9 +41,3 @@ gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
-
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
-.idea/workspace.xml
-*.log
-addressbook-web-tests/build/test-results/binary/testContacts/output.bin
